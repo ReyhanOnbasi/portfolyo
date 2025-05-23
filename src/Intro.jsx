@@ -4,13 +4,17 @@ import PortfolioItem from "./PortfolioItem";
 import egebil from "./assets/ege-bil.jpg";
 import ege2 from "./assets/ege2.jpg";
 import linkedin from "./assets/linwhite.png";
+import ppphoto from "./assets/photo.jpg";
 
 const name = "Reyhan Onbaşı.";
 
 class Intro extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { index: 0 };
+    this.state = {
+      index: 0,
+      darkmode: window.matchMedia("(prefers-color-scheme: dark)").matches,
+    };
   }
 
   componentDidMount() {
@@ -58,10 +62,7 @@ class Intro extends React.Component {
             </h1>
           </div>
           <div className="photo-container">
-            <img
-              className="photo"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT61wyem_hAhZhOWgVDjmWX5cB_GQ19iYYg_w&s"
-            ></img>
+            <img className="photo" src={ppphoto}></img>
             <div className="contact-link">
               <a href="https://www.linkedin.com/in/reyhan-onba%C5%9F%C4%B1-195831331?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app ">
                 <img src={linkedin}></img>
@@ -75,8 +76,37 @@ class Intro extends React.Component {
             </div>
           </div>
         </div>
-        <div className="submain">
+        <div
+          className="submain"
+          style={
+            this.state.darkmode
+              ? { backgroundColor: "#0e2148", color: "white" }
+              : { color: "black" }
+          }
+        >
           <div className="submain-inner">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                width: "100%",
+              }}
+            >
+              <input
+                type="checkbox"
+                checked={this.state.dark}
+                onClick={() => {
+                  this.setState({ darkmode: !this.state.darkmode });
+                }}
+                className="checkbox"
+                id="checkbox"
+              />
+              <label htmlFor="checkbox" className="checkbox-label">
+                <span className="ball"></span>
+              </label>
+            </div>
+
             <h1 id="whoami">Ben Kimim?</h1>
             <p>
               Balıkesir Üniversitesi Bilgisayar Mühendisliği öğrencisiyim.
@@ -99,13 +129,18 @@ class Intro extends React.Component {
             </ul>
             <h1 id="portfolio">Portfolyo</h1>
             <div className="portfolio-items">
-              <PortfolioItem title="TUBİTAK 2209-A">
+              <PortfolioItem
+                darkmode={this.state.darkmode}
+                title="TUBİTAK 2209-A"
+              >
                 Skolyoz Hastaları için Özgün Bir Veri Seti ve Yapay Zeka
                 Uygulamaları : YOLO ve CNN Modellerinin Karşılaştırılması
               </PortfolioItem>
               <PortfolioItem
+                darkmode={this.state.darkmode}
                 title="Yapay Zeka Asistanı"
                 imageUrl="https://portfolyo-iota-ebon.vercel.app/astra_resim.png"
+                href="https://github.com/bytescreator/ai-frontend"
               >
                 bytescreator/ai-frontend projesi, yapay zeka tabanlı bir asistan
                 için modern ve kullanıcı dostu bir web arayüzü sunmayı amaçlayan
@@ -114,7 +149,11 @@ class Intro extends React.Component {
                 masaüstü uygulaması olarak da çalışabilir. Geliştiricilere
                 özelleştirilebilir, esnek ve sade bir başlangıç noktası sağlar.
               </PortfolioItem>
-              <PortfolioItem title="Kasa Uygulaması" imageUrl="">
+              <PortfolioItem
+                darkmode={this.state.darkmode}
+                title="Kasa Uygulaması"
+                imageUrl=""
+              >
                 Bu uygulama, bir kafenin satış, muhasebe ve stok işlemlerini
                 yönetmek için geliştirilmiş masaüstü bir yazılımdır. PyQt6 ve
                 SQLite kullanılarak oluşturulmuş, kullanıcı girişinden ürün
@@ -123,6 +162,7 @@ class Intro extends React.Component {
                 atomik veri yönetimi özellikleri içerir.
               </PortfolioItem>
               <PortfolioItem
+                darkmode={this.state.darkmode}
                 href="https://www.google.com"
                 title="Benzinlik Otomasyonu"
                 imageUrl=""
@@ -135,6 +175,7 @@ class Intro extends React.Component {
                 ve anlaşılır bir araçtır.
               </PortfolioItem>
               <PortfolioItem
+                darkmode={this.state.darkmode}
                 href="https://www.google.com"
                 title="Soru Bankası"
                 imageUrl=""

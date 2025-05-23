@@ -5,7 +5,14 @@ class PortfolioItem extends React.Component {
   render() {
     return (
       <a target="_blank" className="portfolio-a" href={this.props.href}>
-        <div className="portfolio-item-outer">
+        <div
+          className="portfolio-item-outer"
+          style={
+            this.props.darkmode
+              ? { border: "1px solid white" }
+              : { border: "1px solid black" }
+          }
+        >
           <div className="portfolio-item">
             <div className="portfolio-item-text">
               <div className="portfolio-title">{this.props.title}</div>
