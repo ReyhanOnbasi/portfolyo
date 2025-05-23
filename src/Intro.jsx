@@ -158,8 +158,8 @@ class Intro extends React.Component {
                 href="https://github.com/ReyhanOnbasi/kasa_app"
               >
                 Bu uygulama, bir kafenin satış, muhasebe ve stok işlemlerini
-                yönetmek için geliştirilmiş masaüstü bir yazılımdır. PyQt6 ve
-                SQLite kullanılarak oluşturulmuş, kullanıcı girişinden ürün
+                yönetmek için geliştirilmiş masaüstü bir yazılımdır. PyQt5 ve
+                SQLite3 kullanılarak oluşturulmuş, kullanıcı girişinden ürün
                 satışına, stok güncellemeden muhasebeleştirmeye kadar tüm iş
                 akışlarını tek bir arayüzde sunar. Yetkilendirme, işlem kaydı ve
                 atomik veri yönetimi özellikleri içerir.
@@ -169,24 +169,16 @@ class Intro extends React.Component {
                 title="Benzinlik Otomasyonu"
                 href="https://github.com/ReyhanOnbasi/benzinlik"
               >
-                Üniversite projesi, girilen metinler arasında benzerlik oranını
-                hesaplayarak karşılaştırma yapmayı amaçlar. Özellikle ödev ya da
-                rapor gibi içeriklerde benzerlik kontrolü için kullanılır. Temel
-                string karşılaştırma algoritmalarıyla çalışır ve kullanıcıya
-                benzerlik yüzdesi şeklinde çıktı verir. Öğrenciler için pratik
-                ve anlaşılır bir araçtır.
+                Üniversite projesi, bir benzinliğin ihtiyaç duyduğu depo ve
+                tüketim hesaplamalarını yapar.
               </PortfolioItem>
               <PortfolioItem
                 darkmode={this.state.darkmode}
                 title="Soru Bankası"
                 href="https://github.com/ReyhanOnbasi/sorubank"
               >
-                Soru Bankası, farklı ders ve konulara göre kategorize edilmiş
-                soruların eklenip yönetilebildiği, kullanıcıların test
-                hazırlayabildiği bir uygulamadır. Öğretmen ve öğrenci odaklı
-                kullanım için uygundur. Sorular metin veya görsel içerikli
-                olabilir, sistem aynı zamanda cevap kontrolü ve test geçmişi
-                özellikleri de sunar.
+                Soru Bankası, istenilen soruların yüklenerek PDF formatında
+                sınav kağıdı ve xlsx olarak cevap kağıtları üretilmesini sağlar.
               </PortfolioItem>
             </div>
             <h1 id="portfolio">Sertifikalar</h1>
