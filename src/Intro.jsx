@@ -152,7 +152,7 @@ class Intro extends React.Component {
               <PortfolioItem
                 darkmode={this.state.darkmode}
                 title="Kasa Uygulaması"
-                imageUrl=""
+                href="https://github.com/ReyhanOnbasi/kasa_app"
               >
                 Bu uygulama, bir kafenin satış, muhasebe ve stok işlemlerini
                 yönetmek için geliştirilmiş masaüstü bir yazılımdır. PyQt6 ve
@@ -163,9 +163,8 @@ class Intro extends React.Component {
               </PortfolioItem>
               <PortfolioItem
                 darkmode={this.state.darkmode}
-                href="https://www.google.com"
                 title="Benzinlik Otomasyonu"
-                imageUrl=""
+                href="https://github.com/ReyhanOnbasi/benzinlik"
               >
                 Üniversite projesi, girilen metinler arasında benzerlik oranını
                 hesaplayarak karşılaştırma yapmayı amaçlar. Özellikle ödev ya da
@@ -176,9 +175,8 @@ class Intro extends React.Component {
               </PortfolioItem>
               <PortfolioItem
                 darkmode={this.state.darkmode}
-                href="https://www.google.com"
                 title="Soru Bankası"
-                imageUrl=""
+                href="https://github.com/ReyhanOnbasi/sorubank"
               >
                 Soru Bankası, farklı ders ve konulara göre kategorize edilmiş
                 soruların eklenip yönetilebildiği, kullanıcıların test

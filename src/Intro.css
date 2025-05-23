@@ -30,6 +30,7 @@
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  transition: background 0.2s linear;
   background-color: white;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
