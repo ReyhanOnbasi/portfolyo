@@ -1,0 +1,130 @@
+.main {
+  width: 70%;
+  max-width: 1600px;
+  margin: auto;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+
+.contact-link {
+  display: flex;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  flex-direction: row;
+}
+.contact-link img {
+  width: 30px;
+}
+
+.submain {
+  color: white;
+  display: flex;
+  font-family: Inter;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  background-color: white;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.submain-inner {
+  width: 90%;
+  max-width: 1000px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  color: black;
+}
+.submain-fill {
+  display: flex;
+  height: 100%;
+  background-color: white;
+  flex-grow: 1;
+}
+
+.submain h1 {
+  color: #e3d095;
+}
+
+.submain-inner h1 {
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.submain-inner p,
+li {
+  line-height: 1.7rem;
+}
+
+.submain-inner form > input,
+textarea {
+  margin-bottom: 10px;
+}
+
+.portfolio-items {
+  width: 95%;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificates-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.certificates-div img {
+  border-radius: 30px;
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 85%;
+    height: 10%;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .photo-container,
+  .photo {
+    align-self: end;
+  }
+  .photo {
+    height: 150px;
+  }
+}
+
+.main h1 {
+  position: relative;
+  font-family: Inter;
+  color: white;
+}
+.main h1 > h1 {
+  background-image: linear-gradient(#6190e8, #a7bfe8);
+  color: transparent;
+  background-clip: text;
+}
+
+.photo {
+  border-radius: 100%;
+  border: 3px solid #6190e8;
+}
